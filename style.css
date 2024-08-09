@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, var(--background-gradient));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow Semi Condensed", sans-serif, monospace;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    border: 2px solid var(--neutral-3);
+    border-radius: 20px;
+    padding: 1em;
+    margin-top: 3em;
+    width: 50vw;
+    z-index: 1;
+    margin-inline: auto;
+}
+
+header img {
+    margin: .5em;
+}
+
+header div {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-inline: 3em;
+    padding-top: 1em;
+}
+
+header div p:first-child {
+    color: var(--neutral-2);
+    margin-bottom: -1.3em;
+    font-weight: 700;
+    letter-spacing: .2em;
+}
+
+header div p.player-score {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--neutral-1);
+}
+
+main {
+    display: none;
+}
+
+main section p {
+    font-weight: 700;
+}
+
+main.step-1 {
+    background: url(images/bg-triangle.svg) no-repeat center center;
+}
+
+main.show {
+    display: block;
+}
+
+main.step-2.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.step-2 section p {
+    z-index: 5;
+}
+
+main div {
+    align-self: center;
+    z-index: 1;
+}
+
+main figure {
+    display: inline-block;
+    background-image: linear-gradient(rgb(24, 35, 65), rgb(21, 30, 61));
+    padding: 1.5em;
+    margin: 2em;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: relative;
+}
+
+main figure img {
+    width: 8em;
+}
+
+main.step-2 p {
+    margin-top: 1em;
+    letter-spacing: .2em;
+}
+
+figure.winner {
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.2),
+        0 0 0 50px rgb(42, 51, 82),
+        0 0 0 100px rgb(36, 47, 79),
+        0 0 0 150px rgb(31, 42, 74);
+}
+
+main figure:hover {
+    filter: brightness(105%);
+}
+
+button {
+    cursor: pointer;
+}
+
+section.rules {
+    display: none;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 2em;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+section.rules p {
+    color: var(--neutral-1);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+section.rules div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+section.rules div img {
+    cursor: pointer;
+    ;
+}
+
+section.rules.show {
+    display: block;
+}
+
+div.play-again.hide {
+    display: none;
+}
+
+div.play-again p {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+div.play-again button {
+    padding: .8em;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: var(--neutral-2);
+    width: 13em;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+div.play-again button:hover {
+    color: hsl(349, 70%, 56%);
+}
+
+input {
+    display: none;
+}
+
+figure img {
+    padding: 2em;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+}
+
+footer button {
+    padding: .4em;
+    width: 8em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    font-size: 1em;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.rock {
+    background-image: linear-gradient(var(--hands-background)), radial-gradient(circle at top left, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.scissors {
+    background-image: linear-gradient(var(--hands-background)), radial-gradient(circle at top left, var(--scissors-gradient));
+}
+
+.paper {
+    background-image: linear-gradient(var(--hands-background)), radial-gradient(circle at top left, var(--paper-gradient));
+}
+
+.lizard {
+    background-image: linear-gradient(var(--hands-background)), radial-gradient(circle at top left, var(--lizard-gradient));
+}
+
+.spock {
+    background-image: linear-gradient(var(--hands-background)), radial-gradient(circle at top left, var(--spock-gradient));
+}
+
+.overlap {
+    z-index: -5;
+}

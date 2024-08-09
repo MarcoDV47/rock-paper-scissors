@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link media="(max-width: 726px)" rel="stylesheet" href="tablet.css">
+  <link media="(max-width: 426px)" rel="stylesheet" href="mobile.css">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+
+  <section>
+    <header>
+      <img src="images/logo.svg" alt="Rock, Paper, Scissors Logo">
+      <div>
+        <p>SCORE</p>
+        <p class="player-score">0</p>
+      </div>
+    </header>
+
+    <main class="step-1 show">
+      <label for="paper">
+        <figure class="paper">
+          <input type="radio" name="hands" id="paper">
+          <img src="images/icon-paper.svg" alt="Paper Hand">
+        </figure>
+      </label>
+      <label for="scissors">
+        <figure class="scissors">
+          <input type="radio" name="hands" id="scissors">
+          <img src="images/icon-scissors.svg" alt="Scissors Hand">
+        </figure>
+      </label>
+      <br>
+      <label for="rock">
+        <figure class="rock">
+          <input type="radio" name="hands" id="rock">
+          <img src="images/icon-rock.svg" alt="Rock Hand">
+        </figure>
+      </label>
+    </main>
+
+    <!-- Step 2 -->
+    <main class="step-2">
+      <section>
+        <p>YOU PICKED</p>
+        <figure>
+          <img class="player-hand" src="images/icon-rock.svg" alt="Your Hand">
+        </figure>
+      </section>
+      <div class="play-again hide">
+        <p>YOU WIN</p>
+        <button>PLAY AGAIN</button>
+      </div>
+      <section>
+        <p>THE HOUSE PICKED</p>
+        <figure>
+          <img class="house-hand hide" src="images/icon-rock.svg" alt="House Hand">
+        </figure>
+      </section>
+    </main>
+
+
+    <section class="rules">
+      <div>
+        <p>RULES</p>
+        <img src="images/icon-close.svg" alt="close rules">
+      </div>
+      <img src="images/image-rules.svg" alt="Rules of the game">
+    </section>
+
+    <footer>
+      <button>RULES</button>
+    </footer>
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
